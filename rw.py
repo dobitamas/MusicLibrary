@@ -17,13 +17,12 @@ def put_in_class(music1):
     return(album)
 
 
-def save_to_list(album,filename):
-    writer = open(filename, "w")
-    for sor in range(len(music1)):
-        for elem in sor:
-            writer.writelines(album[sor][elem])
-    
+def save_to_list(music1):
+    with open("Music1.txt", 'w') as f:
+     for sublist in music1:
+          line = "{},{},{},{},{}".format(sublist[0], sublist[1],sublist[2],sublist[3],sublist[4])
+          f.write(line)
 
 open_to_list(music1)
 put_in_class(music1)
-save_to_list(album,"Music1.txt")
+save_to_list(music1)
