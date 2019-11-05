@@ -3,7 +3,7 @@ import os
 import rw
 
 album = rw.album
-
+chosenList = [ 2, 3, 4, 5]
 def clear():           #log clear
     os.system('cls' if os.name=='nt' else 'clear')
 
@@ -19,19 +19,20 @@ def fomenu(album):    #fomenu
 def almenu(choice,album):            #fomenu utan, indítja a választott def-et
     # első almenü (view all)
     if choice == 1:
-        printer(album,music1)
+        printer(album,chosenList)
     elif choice == 2:
-        # def
+        pass
     elif choice == 3:
-        #def
+        pass
     elif choice == 4:
-        #exit()
+        pass
     
 
-def printer(album,chosenlist):    #printel, pont annyi sort amennyit éppen bekérünk
+def printer(album,chosenList):    #printel, pont anzokat a sorokat amiket bekérünk
     print("___________________________________________________________________________")
     for i in chosenList:
-        print(f"| {album[i].artist_name} | {album[i].album_name} | {album[i].release_year} | {album[i].genre} | {album[i].lenght}")
+        print(f"| {album[i].artist_name.center()} | {album[i].album_name.center()} | {album[i].release_year.center()} | {album[i].genre.center()} | {album[i].lenght.center()}")
         print("___________________________________________________________________________")
 
 
+printer(album,chosenList)
