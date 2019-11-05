@@ -19,8 +19,8 @@ def fomenu(album):
 def almenu(choice,album):
     # első almenü (view all)
     
-    print("__________________________________________________________________________")
+    print("___________________________________________________________________________")
     for elem in range(len(album)):
-        print("| {} | {} | {} | {} | {} |".format(album[elem].artist_name,album[elem].album_name,album[elem].release_year,album[elem].genre, album[elem].lenght))
-        print("__________________________________________________________________________")
+        print("| {} | {} | {} | {} | {}|".format(album[elem].artist_name.center,album[elem].album_name.center,album[elem].release_year.center,album[elem].genre.center, album[elem].lenght.center))
+        print("___________________________________________________________________________")
 fomenu(album)
